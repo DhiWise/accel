@@ -1,0 +1,3966 @@
+{
+	"info": {
+		"name": "accel",
+		"_postman_id": "d96eb40a-230d-4a91-a48f-86fd2cc74a76",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"description": "admin APIs",
+			"item": [
+				{
+					"name": "Company",
+					"description": "Company Model APIs",
+					"item": [
+						{
+							"name": "getCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/:id",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getCompany_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"company_name\": \"Plastic\",\n    \"company_image_url\": \"redundant\",\n    \"pitch_video_url\": \"exploit\",\n    \"company_description\": \"Planner\",\n    \"company_id\": \"empower\",\n    \"company_logo\": \"Ergonomic\",\n    \"founders\": [\n      {\n        \"_id\": false,\n        \"founder_name\": \"virtual\",\n        \"founder_image\": \"Chicken\"\n      }\n    ],\n    \"id\": \"64c8b300ddbba60025fe0b96\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-19T22:50:29.064Z\",\n    \"updatedAt\": \"2024-04-28T06:34:26.480Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "addCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/create",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"company_name\": \"Plastic\",\n  \"company_image_url\": \"redundant\",\n  \"pitch_video_url\": \"exploit\",\n  \"company_description\": \"Planner\",\n  \"company_id\": \"empower\",\n  \"company_logo\": \"Ergonomic\",\n  \"founders\": [\n    {\n      \"_id\": false,\n      \"founder_name\": \"virtual\",\n      \"founder_image\": \"Chicken\"\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "addCompany_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/create"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"company_name\": \"Plastic\",\n    \"company_image_url\": \"redundant\",\n    \"pitch_video_url\": \"exploit\",\n    \"company_description\": \"Planner\",\n    \"company_id\": \"empower\",\n    \"company_logo\": \"Ergonomic\",\n    \"founders\": [\n      {\n        \"_id\": false,\n        \"founder_name\": \"virtual\",\n        \"founder_image\": \"Chicken\"\n      }\n    ],\n    \"id\": \"64c8b300ddbba60025fe0b94\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-19T22:50:29.064Z\",\n    \"updatedAt\": \"2024-04-28T06:34:26.480Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "findAllCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/list",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": {}, \"isCountOnly\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "findAllCompany_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/list"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"company_name\": \"Plastic\",\n        \"company_image_url\": \"redundant\",\n        \"pitch_video_url\": \"exploit\",\n        \"company_description\": \"Planner\",\n        \"company_id\": \"empower\",\n        \"company_logo\": \"Ergonomic\",\n        \"founders\": [\n          {\n            \"_id\": false,\n            \"founder_name\": \"virtual\",\n            \"founder_image\": \"Chicken\"\n          }\n        ],\n        \"id\": \"64c8b300ddbba60025fe0b95\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2024-01-19T22:50:29.064Z\",\n        \"updatedAt\": \"2024-04-28T06:34:26.480Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "getCompanyCount",
+							"request": {
+								"url": "http://localhost:5000/admin/company/count",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getCompanyCount_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/count"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 10\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insertBulkCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/addBulk",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": [\n    {\n      \"company_name\": \"Plastic\",\n      \"company_image_url\": \"redundant\",\n      \"pitch_video_url\": \"exploit\",\n      \"company_description\": \"Planner\",\n      \"company_id\": \"empower\",\n      \"company_logo\": \"Ergonomic\",\n      \"founders\": [\n        {\n          \"_id\": false,\n          \"founder_name\": \"virtual\",\n          \"founder_image\": \"Chicken\"\n        }\n      ]\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "insertBulkCompany_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/addBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteManyCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/deleteMany",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteManyCompany_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/deleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"company_name\": \"Plastic\",\n  \"company_image_url\": \"redundant\",\n  \"pitch_video_url\": \"exploit\",\n  \"company_description\": \"Planner\",\n  \"company_id\": \"empower\",\n  \"company_logo\": \"Ergonomic\",\n  \"founders\": [\n    {\n      \"_id\": false,\n      \"founder_name\": \"virtual\",\n      \"founder_image\": \"Chicken\"\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateCompany_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"company_name\": \"Plastic\",\n    \"company_image_url\": \"redundant\",\n    \"pitch_video_url\": \"exploit\",\n    \"company_description\": \"Planner\",\n    \"company_id\": \"empower\",\n    \"company_logo\": \"Ergonomic\",\n    \"founders\": [\n      {\n        \"_id\": false,\n        \"founder_name\": \"virtual\",\n        \"founder_image\": \"Chicken\"\n      }\n    ],\n    \"id\": \"64c8b300ddbba60025fe0b97\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-19T22:50:29.064Z\",\n    \"updatedAt\": \"2024-04-28T06:34:26.480Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "partialupdateCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/partial-update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "partialupdateCompany_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/partial-update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"company_name\": \"Plastic\",\n    \"company_image_url\": \"redundant\",\n    \"pitch_video_url\": \"exploit\",\n    \"company_description\": \"Planner\",\n    \"company_id\": \"empower\",\n    \"company_logo\": \"Ergonomic\",\n    \"founders\": [\n      {\n        \"_id\": false,\n        \"founder_name\": \"virtual\",\n        \"founder_image\": \"Chicken\"\n      }\n    ],\n    \"id\": \"64c8b300ddbba60025fe0b98\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-19T22:50:29.064Z\",\n    \"updatedAt\": \"2024-04-28T06:34:26.480Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/softDelete/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteCompany_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/softDelete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteManyCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/softDeleteMany",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteManyCompany_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/softDeleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateBulkCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/updateBulk",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateBulkCompany_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/updateBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteCompany",
+							"request": {
+								"url": "http://localhost:5000/admin/company/delete/:id",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteCompany_response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/company/delete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"Count\": 1\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				},
+				{
+					"name": "user",
+					"description": "user Model APIs",
+					"item": [
+						{
+							"name": "getuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/:id",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getuser_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"userType\": 1,\n    \"id\": \"64c8b300ddbba60025fe0b9e\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n    \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "get loggedin User",
+							"request": {
+								"url": "http://localhost:5000/admin/user/me",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "loggedInUserInfo_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/me"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"userType\": 1,\n    \"id\": \"64c8b300ddbba60025fe0ba4\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n    \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "adduser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/create",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"Alden.Hartmann\",\n  \"password\": \"Hw0CDh6JbTO4gFu\",\n  \"email\": \"Paige_Metz5@gmail.com\",\n  \"name\": \"Jordan Considine IV\",\n  \"mobileNo\": \"(161) 527-7526\",\n  \"userType\": 1\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "adduser_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/create"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"userType\": 1,\n    \"id\": \"64c8b300ddbba60025fe0b9c\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n    \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "findAlluser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/list",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "findAlluser_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/list"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"username\": \"Alden.Hartmann\",\n        \"email\": \"Paige_Metz5@gmail.com\",\n        \"name\": \"Jordan Considine IV\",\n        \"mobileNo\": \"(161) 527-7526\",\n        \"userType\": 1,\n        \"id\": \"64c8b300ddbba60025fe0b9d\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n        \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "getuserCount",
+							"request": {
+								"url": "http://localhost:5000/admin/user/count",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getuserCount_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/count"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 10\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insertBulkuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/addBulk",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": [\n    {\n      \"username\": \"Alden.Hartmann\",\n      \"password\": \"Hw0CDh6JbTO4gFu\",\n      \"email\": \"Paige_Metz5@gmail.com\",\n      \"name\": \"Jordan Considine IV\",\n      \"mobileNo\": \"(161) 527-7526\",\n      \"userType\": 1\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "insertBulkuser_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/addBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteManyuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/deleteMany",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteManyuser_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/deleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"Alden.Hartmann\",\n  \"password\": \"Hw0CDh6JbTO4gFu\",\n  \"email\": \"Paige_Metz5@gmail.com\",\n  \"name\": \"Jordan Considine IV\",\n  \"mobileNo\": \"(161) 527-7526\",\n  \"userType\": 1\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateuser_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"userType\": 1,\n    \"id\": \"64c8b300ddbba60025fe0b9f\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n    \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "partialupdateuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/partial-update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "partialupdateuser_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/partial-update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"userType\": 1,\n    \"id\": \"64c8b300ddbba60025fe0ba0\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n    \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/softDelete/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteuser_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/softDelete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteManyuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/softDeleteMany",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteManyuser_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/softDeleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateBulkuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/updateBulk",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateBulkuser_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/updateBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateProfile",
+							"request": {
+								"url": "http://localhost:5000/admin/user/update-profile",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"Alden.Hartmann\",\n  \"password\": \"Hw0CDh6JbTO4gFu\",\n  \"email\": \"Paige_Metz5@gmail.com\",\n  \"name\": \"Jordan Considine IV\",\n  \"mobileNo\": \"(161) 527-7526\",\n  \"userType\": 1\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateProfileuser_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/update-profile"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"userType\": 1,\n    \"id\": \"64c8b300ddbba60025fe0ba3\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-08T21:31:04.847Z\",\n    \"updatedAt\": \"2024-04-22T22:23:16.226Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteuser",
+							"request": {
+								"url": "http://localhost:5000/admin/user/delete/:id",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteuser_response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/delete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"Count\": 1\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				},
+				{
+					"name": "login",
+					"description": "admin Login",
+					"item": [
+						{
+							"name": "Login in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/auth/login",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"username\",\n  \"password\": \"password\"\n}"
+								},
+								"description": "",
+								"auth": {}
+							},
+							"response": [
+								{
+									"name": "Login in admin_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/auth/login"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"id\": \"64c8b300ddbba60025fe0ba5\",\n    \"loginRetryLimit\": 0,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRlZDVjMGFjMjAxMmFjMDI4ODkxZiIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2MjkzNTEyNzAsImV4cCI6MTYyOTk1MTI3MH0.BJ-WKjNYeFDQ4pn8kfli5gwn6GLz_c3voFht20Agj9k\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-12-21T01:00:09.584Z\",\n    \"updatedAt\": \"2023-12-28T17:25:41.770Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Register User in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/auth/register",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"Alden.Hartmann\",\n  \"password\": \"Hw0CDh6JbTO4gFu\",\n  \"email\": \"Paige_Metz5@gmail.com\",\n  \"name\": \"Jordan Considine IV\",\n  \"mobileNo\": \"(161) 527-7526\"\n}"
+								},
+								"description": "",
+								"auth": {}
+							},
+							"response": [
+								{
+									"name": "Register User in admin_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/auth/register"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"username\": \"Alden.Hartmann\",\n    \"email\": \"Paige_Metz5@gmail.com\",\n    \"name\": \"Jordan Considine IV\",\n    \"mobileNo\": \"(161) 527-7526\",\n    \"id\": \"64c8b300ddbba60025fe0ba5\",\n    \"loginRetryLimit\": 0,\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-12-21T01:00:09.584Z\",\n    \"updatedAt\": \"2023-12-28T17:25:41.770Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Forgot Password in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/auth/forgot-password",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+								},
+								"description": "",
+								"auth": {}
+							},
+							"response": [
+								{
+									"name": "Forgot Password in admin_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/auth/forgot-password"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"otp successfully send to your email.\",\n  \"data\": {}\n}",
+									"header": [],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Validate OTP in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/auth/validate-otp",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"otp\": \"5898\"\n}"
+								},
+								"description": "",
+								"auth": {}
+							},
+							"response": [
+								{
+									"name": "Validate OTP in admin_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/auth/validate-otp"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Invalid OTP\",\n  \"data\": {}\n}",
+									"header": [],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Logout in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/auth/logout",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Change Password in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/user/change-password",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"oldPassword\": \"OldPassword\",\n  \"newPassword\": \"NewPassword\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "Change Password in admin_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/user/change-password"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Password changed successfully\",\n  \"data\": {}\n}",
+									"header": [],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Reset password in admin",
+							"request": {
+								"url": "http://localhost:5000/admin/auth/reset-password",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+								},
+								"description": "",
+								"auth": {}
+							},
+							"response": [
+								{
+									"name": "Reset password in admin_response~",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/auth/reset-password"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Password reset successfully\",\n  \"data\": {}\n}",
+									"header": [],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				},
+				{
+					"name": "role",
+					"description": "role Model APIs",
+					"item": [
+						{
+							"name": "getrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/:id",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getrole_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Marilyn Rowe\",\n    \"code\": \"Engineer\",\n    \"weight\": 645,\n    \"id\": \"64c8b300ddbba60025fe0baf\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-23T03:07:03.346Z\",\n    \"updatedAt\": \"2023-11-06T00:57:17.026Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "addrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/create",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Marilyn Rowe\",\n  \"code\": \"Engineer\",\n  \"weight\": 645\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "addrole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/create"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Marilyn Rowe\",\n    \"code\": \"Engineer\",\n    \"weight\": 645,\n    \"id\": \"64c8b300ddbba60025fe0ba9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-23T03:07:03.346Z\",\n    \"updatedAt\": \"2023-11-06T00:57:17.026Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insertBulkrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/addBulk",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": [\n    {\n      \"name\": \"Marilyn Rowe\",\n      \"code\": \"Engineer\",\n      \"weight\": 645\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "insertBulkrole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/addBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "findAllrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/list",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "findAllrole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/list"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"name\": \"Marilyn Rowe\",\n        \"code\": \"Engineer\",\n        \"weight\": 645,\n        \"id\": \"64c8b300ddbba60025fe0bab\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2023-08-23T03:07:03.346Z\",\n        \"updatedAt\": \"2023-11-06T00:57:17.026Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "getroleCount",
+							"request": {
+								"url": "http://localhost:5000/admin/role/count",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getroleCount_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/count"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 10\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteManyrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/deleteMany",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteManyrole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/deleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateBulkrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/updateBulk",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateBulkrole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/updateBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteManyrole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/softDeleteMany",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteManyrole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/softDeleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleterole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/softDelete/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleterole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/softDelete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "partialupdaterole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/partial-update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "partialupdaterole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/partial-update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Marilyn Rowe\",\n    \"code\": \"Engineer\",\n    \"weight\": 645,\n    \"id\": \"64c8b300ddbba60025fe0bad\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-23T03:07:03.346Z\",\n    \"updatedAt\": \"2023-11-06T00:57:17.026Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updaterole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Marilyn Rowe\",\n  \"code\": \"Engineer\",\n  \"weight\": 645\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updaterole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"name\": \"Marilyn Rowe\",\n    \"code\": \"Engineer\",\n    \"weight\": 645,\n    \"id\": \"64c8b300ddbba60025fe0bae\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2023-08-23T03:07:03.346Z\",\n    \"updatedAt\": \"2023-11-06T00:57:17.026Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleterole",
+							"request": {
+								"url": "http://localhost:5000/admin/role/delete/:id",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleterole_response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/role/delete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"Count\": 1\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				},
+				{
+					"name": "projectRoute",
+					"description": "projectRoute Model APIs",
+					"item": [
+						{
+							"name": "getprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/:id",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getprojectRoute_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"Cotton\",\n    \"uri\": \"standardization\",\n    \"id\": \"64c8b300ddbba60025fe0bb7\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-07-01T13:24:00.314Z\",\n    \"updatedAt\": \"2023-10-17T21:55:13.309Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "addprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/create",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"route_name\": \"Research\",\n  \"method\": \"Cotton\",\n  \"uri\": \"standardization\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "addprojectRoute_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/create"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"Cotton\",\n    \"uri\": \"standardization\",\n    \"id\": \"64c8b300ddbba60025fe0bb1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-07-01T13:24:00.314Z\",\n    \"updatedAt\": \"2023-10-17T21:55:13.309Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insertBulkprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/addBulk",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"Research\",\n      \"method\": \"Cotton\",\n      \"uri\": \"standardization\"\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "insertBulkprojectRoute_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/addBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "findAllprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/list",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "findAllprojectRoute_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/list"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"route_name\": \"Research\",\n        \"method\": \"Cotton\",\n        \"uri\": \"standardization\",\n        \"id\": \"64c8b300ddbba60025fe0bb3\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2024-07-01T13:24:00.314Z\",\n        \"updatedAt\": \"2023-10-17T21:55:13.309Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "getprojectRouteCount",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/count",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getprojectRouteCount_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/count"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 10\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteManyprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/deleteMany",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteManyprojectRoute_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/deleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateBulkprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/updateBulk",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateBulkprojectRoute_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/updateBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteManyprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/softDeleteMany",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteManyprojectRoute_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/softDeleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/softDelete/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteprojectRoute_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/softDelete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "partialupdateprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/partial-update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "partialupdateprojectRoute_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/partial-update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"Cotton\",\n    \"uri\": \"standardization\",\n    \"id\": \"64c8b300ddbba60025fe0bb5\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-07-01T13:24:00.314Z\",\n    \"updatedAt\": \"2023-10-17T21:55:13.309Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"route_name\": \"Research\",\n  \"method\": \"Cotton\",\n  \"uri\": \"standardization\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateprojectRoute_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"route_name\": \"Research\",\n    \"method\": \"Cotton\",\n    \"uri\": \"standardization\",\n    \"id\": \"64c8b300ddbba60025fe0bb6\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-07-01T13:24:00.314Z\",\n    \"updatedAt\": \"2023-10-17T21:55:13.309Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteprojectRoute",
+							"request": {
+								"url": "http://localhost:5000/admin/projectroute/delete/:id",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteprojectRoute_response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/projectroute/delete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"Count\": 1\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				},
+				{
+					"name": "routeRole",
+					"description": "routeRole Model APIs",
+					"item": [
+						{
+							"name": "getrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/:id",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getrouteRole_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n    \"roleId\": \"64c8b300ddbba60025fe0bb9\",\n    \"id\": \"64c8b300ddbba60025fe0bc1\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-31T12:22:08.689Z\",\n    \"updatedAt\": \"2023-09-04T04:05:56.518Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "addrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/create",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n  \"roleId\": \"64c8b300ddbba60025fe0bb9\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "addrouteRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/create"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n    \"roleId\": \"64c8b300ddbba60025fe0bb9\",\n    \"id\": \"64c8b300ddbba60025fe0bbb\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-31T12:22:08.689Z\",\n    \"updatedAt\": \"2023-09-04T04:05:56.518Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insertBulkrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/addBulk",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n      \"roleId\": \"64c8b300ddbba60025fe0bb9\"\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "insertBulkrouteRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/addBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "findAllrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/list",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "findAllrouteRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/list"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n        \"roleId\": \"64c8b300ddbba60025fe0bb9\",\n        \"id\": \"64c8b300ddbba60025fe0bbd\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2024-01-31T12:22:08.689Z\",\n        \"updatedAt\": \"2023-09-04T04:05:56.518Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "getrouteRoleCount",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/count",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getrouteRoleCount_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/count"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 10\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteManyrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/deleteMany",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteManyrouteRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/deleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateBulkrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/updateBulk",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateBulkrouteRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/updateBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteManyrouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/softDeleteMany",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteManyrouteRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/softDeleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleterouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/softDelete/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleterouteRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/softDelete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "partialupdaterouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/partial-update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "partialupdaterouteRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/partial-update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n    \"roleId\": \"64c8b300ddbba60025fe0bb9\",\n    \"id\": \"64c8b300ddbba60025fe0bbf\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-31T12:22:08.689Z\",\n    \"updatedAt\": \"2023-09-04T04:05:56.518Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updaterouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n  \"roleId\": \"64c8b300ddbba60025fe0bb9\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updaterouteRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"routeId\": \"64c8b300ddbba60025fe0bb8\",\n    \"roleId\": \"64c8b300ddbba60025fe0bb9\",\n    \"id\": \"64c8b300ddbba60025fe0bc0\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-01-31T12:22:08.689Z\",\n    \"updatedAt\": \"2023-09-04T04:05:56.518Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleterouteRole",
+							"request": {
+								"url": "http://localhost:5000/admin/routerole/delete/:id",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleterouteRole_response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/routerole/delete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"Count\": 1\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				},
+				{
+					"name": "userRole",
+					"description": "userRole Model APIs",
+					"item": [
+						{
+							"name": "getuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/:id",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getuserRole_response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"64c8b300ddbba60025fe0bc2\",\n    \"roleId\": \"64c8b300ddbba60025fe0bc3\",\n    \"id\": \"64c8b300ddbba60025fe0bcb\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-02-09T13:55:30.575Z\",\n    \"updatedAt\": \"2023-09-02T07:40:24.205Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "adduserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/create",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"64c8b300ddbba60025fe0bc2\",\n  \"roleId\": \"64c8b300ddbba60025fe0bc3\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "adduserRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/create"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"64c8b300ddbba60025fe0bc2\",\n    \"roleId\": \"64c8b300ddbba60025fe0bc3\",\n    \"id\": \"64c8b300ddbba60025fe0bc5\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-02-09T13:55:30.575Z\",\n    \"updatedAt\": \"2023-09-02T07:40:24.205Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "insertBulkuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/addBulk",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": [\n    {\n      \"userId\": \"64c8b300ddbba60025fe0bc2\",\n      \"roleId\": \"64c8b300ddbba60025fe0bc3\"\n    }\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "insertBulkuserRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/addBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "findAlluserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/list",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "findAlluserRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/list"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"data\": [\n      {\n        \"userId\": \"64c8b300ddbba60025fe0bc2\",\n        \"roleId\": \"64c8b300ddbba60025fe0bc3\",\n        \"id\": \"64c8b300ddbba60025fe0bc7\",\n        \"isDeleted\": false,\n        \"isActive\": true,\n        \"createdAt\": \"2024-02-09T13:55:30.575Z\",\n        \"updatedAt\": \"2023-09-02T07:40:24.205Z\"\n      }\n    ],\n    \"paginator\": {\n      \"itemCount\": 1,\n      \"offset\": 0,\n      \"perPage\": 10,\n      \"pageCount\": 1,\n      \"currentPage\": 1,\n      \"slNo\": 1,\n      \"hasPrevPage\": false,\n      \"hasNextPage\": false,\n      \"prev\": null,\n      \"next\": null\n    }\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "getuserRoleCount",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/count",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "getuserRoleCount_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/count"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 10\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteManyuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/deleteMany",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true,\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteManyuserRole_response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/deleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateBulkuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/updateBulk",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateBulkuserRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/updateBulk"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteManyuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/softDeleteMany",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ids\": [\n    \":id\"\n  ]\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteManyuserRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/softDeleteMany"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "softDeleteuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/softDelete/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "softDeleteuserRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/softDelete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"count\": 2\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "partialupdateuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/partial-update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "partialupdateuserRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/partial-update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"64c8b300ddbba60025fe0bc2\",\n    \"roleId\": \"64c8b300ddbba60025fe0bc3\",\n    \"id\": \"64c8b300ddbba60025fe0bc9\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-02-09T13:55:30.575Z\",\n    \"updatedAt\": \"2023-09-02T07:40:24.205Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "updateuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/update/:id",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"64c8b300ddbba60025fe0bc2\",\n  \"roleId\": \"64c8b300ddbba60025fe0bc3\"\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "updateuserRole_response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/update/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"userId\": \"64c8b300ddbba60025fe0bc2\",\n    \"roleId\": \"64c8b300ddbba60025fe0bc3\",\n    \"id\": \"64c8b300ddbba60025fe0bca\",\n    \"isDeleted\": false,\n    \"isActive\": true,\n    \"createdAt\": \"2024-02-09T13:55:30.575Z\",\n    \"updatedAt\": \"2023-09-02T07:40:24.205Z\"\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "deleteuserRole",
+							"request": {
+								"url": "http://localhost:5000/admin/userrole/delete/:id",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isWarning\": true\n}"
+								},
+								"description": "",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								}
+							},
+							"response": [
+								{
+									"name": "deleteuserRole_response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/admin/userrole/delete/:id"
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"Count\": 1\n  }\n}",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					]
+				}
+			]
+		}
+	]
+}
